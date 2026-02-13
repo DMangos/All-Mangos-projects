@@ -1,0 +1,10 @@
+name: my-js-project 
+services:
+   js-app:
+    build: .
+    container_name: js-app
+    ports:
+      - 3001:3000
+networks:
+    nodejs-network:
+

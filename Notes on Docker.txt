@@ -1,0 +1,8 @@
+Notes on Docker
+
+
+Change Hostname on a running container
+1) Run the following command to find the PID: docker inspect -f ‘{{ .State.Pid }}’ <existing_docker_hostname>
+2) Run this command to login to the container: nsenter --target 15580 --uts
+3) Run this command to change the hostname: hostname "node_js"
+   now exit the container and login again you will see the hostname has been changed.
